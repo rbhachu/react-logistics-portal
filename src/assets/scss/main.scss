@@ -1,0 +1,33 @@
+
+// NAV
+.navbar-brand h1 {
+    font-size: 1.4rem;
+}
+
+
+//search results table
+table {
+    tr:hover { // hightlight td bg on hover
+        background-color: yellow;
+    }
+}
+
+
+// order details
+.order-detail-list li {
+    list-style-type: disc !important;
+    color: black;
+    margin-left: 2rem;
+}
+
+
+//Alert
+.alert {
+    margin: 20px;
+    text-align: center;
+}
+.alert-txt {
+    margin: 20px;
+    text-align: center;
+    color: red;
+}
