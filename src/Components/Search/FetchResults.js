@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect  } from 'react';
 import axios from 'axios';
 
 const useFetchData = ({ token, startDate, endDate }) => {
@@ -36,7 +36,7 @@ const useFetchData = ({ token, startDate, endDate }) => {
     }, [token, JSONstartDate, JSONendDate]);
 
     return {
-        data, loading
+        status, data, loading
     };
 };
 

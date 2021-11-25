@@ -11,7 +11,7 @@ function Search({ token }) {
     let today = new Date(); // get current date
     const [startDate, setStartDate] = useState(today.setDate(today.getDate() - 7)) // current date -7 days
     const [endDate, setEndDate] = useState(new Date())
-    const { data, loading } = UseFetchData({ token, startDate, endDate });
+    const { status, data, loading } = UseFetchData({ token, startDate, endDate });
 
     return (
 
@@ -49,7 +49,7 @@ function Search({ token }) {
                 </Row>
                 <Row>
                     <Col>
-                        {(loading === true) ? 
+                        {(loading === true && status === 200) ? 
                             (<img src={imageLoading} alt="Loading..." title="Loading..." />)
                         :
                             (<TableResults data={data} token={token} />)
